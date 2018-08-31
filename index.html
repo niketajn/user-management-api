@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<div class="row" id="users-data">
+			<div class="col-md-2 nav-list-group">
+				<ul>
+					<li class="usersListItem" id="show-users">Show users</li>
+					<li class="usersListItem" id="add-users">Add users</li>
+				</ul>
+			</div>
+		    <div class="col-md-10">
+		    		<div id="users-table">
+			    		<table class="table table-striped">
+			    			<thead>
+			    				<tr>
+			    					<th style="display: none">USERID</th>
+							        <th>NAME</th>
+							        <th>DOB</th>
+							        <th>Address</th>
+							        <th>EMAIL</th>
+							        <th>PHONE NUMBER</th>
+							        <th>ACTION</th>
+							      </tr>
+			    			</thead>
+			    		<tbody id="table-content">
+			    		</tbody>
+			    	</table>
+		    		</div>
+		    		<div class="form-data" id="form-data-users">
+		    			<form id="myForm">
+		    				<input type="hidden" name="randomId">
+						    
+						    <div class="form-group">
+						      <label for="user-name">Name</label>
+						      <input type="text" class="form-control" name="user-name">
+						    </div>
+						    		<div class="row">
+						    		<div class="col-md-4 form-group">
+						    			<label>Date Of Birth</label>
+						    			 <div class="input-group">
+        									<div class="input-group-addon">
+         										<i class="fa fa-calendar">
+         													</i>
+        											</div>
+        								<input class="form-control" autocomplete="off" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+       								  </div>
+						    		</div>
+						    	</div>
+						    	
+						   
+						    <div class="sex">
+						    	<label>SEX</label>
+				        	 	<label class="radio-inline">
+				        	 		<input type="radio" name="sex" value="male">Male</label>
+								<label class="radio-inline">
+									<input type="radio" name="sex" value="female">Female</label>
+									<label class="radio-inline">
+									<input type="radio" name="sex" value="other">Other</label>
+								</div>
+								<div class="married">
+								<label>Married</label>
+				        	 	<label class="radio-inline">
+				        	 	<input type="radio" name="married" value="married">Yes</label>
+								<label class="radio-inline">
+								<input type="radio" name="married" value="unmarried">No</label>
+							</div>
+						    <div class="form-group shadow-textarea">
+							    <label for="address">Address</label>
+							    <textarea class="form-control z-depth-1" name="address" rows="3" placeholder="Write something here..."></textarea>
+							</div>
+						    <div class="form-group">
+						      <label for="phnum">Phone Number</label>
+						      <input type="number" class="form-control" name="phnum">
+						    </div>
+						    <div class="form-group">
+						      <label for="email">Email ID</label>
+						      <input type="email" class="form-control" name="email">
+						    </div>
+						    <button type="submit" class="btn btn-info btn-lg submitBtn">Submit</button>
+						</form>
+					</div>
+		   	  </div>
+		</div>
+	</div>
+	</table>
+	<div id="confirm" class="modal hide fade">
+  <div class="modal-body">
+    Are you sure?
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+    <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+  </div>
+</div>
+	<!-- Include Date Range Picker -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	<script src="./js/script.js"></script>
+</body>
+</html>
